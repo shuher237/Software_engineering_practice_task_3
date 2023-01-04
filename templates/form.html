@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work with FastAPI</title>
+</head>
+<body>
+    <form method="post">
+        <p>
+            <textarea name="text" rows="5" cols="50">{{ text }}</textarea>
+        </p>
+        <p>
+            <input name="option" id="option1" type="radio" value="0" checked>
+            <label for="option1">Predict</label>
+        </p>
+        <p>
+            <input name="option" id="option2" type="radio" value="1">
+            <label for="option2">Translate ru to en</label>
+        </p>
+        <p>
+            <input name="option" id="option3" type="radio" value="2">
+            <label for="option3">Translate en to ru</label>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+    
+    <p>Result:</p>
+    <p>{{ result }}</p>
+
+    <script>
+        document.getElementById("{{ option_id }}").checked = true;
+    </script>
+</body>
+</html>
